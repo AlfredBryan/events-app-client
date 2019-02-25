@@ -1,0 +1,14 @@
+.home-page {
+  margin-top: 20px;
+}
+
+.link {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: black;
+}

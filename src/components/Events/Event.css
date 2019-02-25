@@ -1,0 +1,29 @@
+.main-create {
+  width: 947px;
+  height: 877px;
+  background: #6ec7e3;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.21);
+  display: inline-block;
+}
+
+.main-create h3 {
+  margin-top: 40px;
+}
+
+.main-create input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  border-radius: 0px;
+  height: 41px;
+}
+
+@media screen and (max-width: 500px) {
+  .main-create {
+    width: 400px;
+    margin-top: 15px;
+  }
+}

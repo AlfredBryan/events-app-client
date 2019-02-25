@@ -1,0 +1,98 @@
+.main-sign-up {
+  width: 947px;
+  height: 877px;
+  background: #6ec7e3;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.21);
+  display: inline-block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-sign-up h3 {
+  margin-top: 40px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  border-radius: 10px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  background: #90b2bd;
+  border: none;
+  border-radius: 27px;
+  cursor: pointer;
+  margin-top: 100px;
+  width: 278px;
+  height: 76px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 24px;
+  margin-left: 340px;
+}
+
+input[type="submit"]:hover {
+  background-color: #757f83;
+}
+
+.form-container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 150px;
+  margin-top: 15px;
+}
+
+.col-75 {
+  float: left;
+  width: 641px;
+  margin-top: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+  input[type="submit"] {
+    margin-top: 30px;
+    border-radius: 0%;
+    margin-left: 0px;
+  }
+  .main-sign-up {
+    width: 400px;
+    margin-top: 15px;
+  }
+}
