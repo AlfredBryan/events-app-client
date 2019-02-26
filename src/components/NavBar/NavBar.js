@@ -9,7 +9,7 @@ class Home extends Component {
       <div className="wrapper">
         <div className="home-main">
           <ul>
-            <Link to="/">
+            <Link to="/home">
               <li>Home</li>
             </Link>
             <Link to="#">
@@ -18,7 +18,7 @@ class Home extends Component {
             <Link to="#">
               <li>Make Appointment</li>
             </Link>
-            <Link to="#">
+            <Link to="/home">
               <li>Events</li>
             </Link>
           </ul>

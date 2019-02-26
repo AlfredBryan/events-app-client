@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const apiURL = "http://localhost:4000/api/user/login";
@@ -8,20 +9,30 @@ class Login extends Component {
     super();
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      errorMessage: ""
     };
   }
 
   handleSubmit = e => {
     e.preventDefault();
     let { email, password } = this.state;
-    axios.post(`${apiURL}`, { email, password }).then(res => {
-      if (res.status === 200) {
-        localStorage.setItem("token", res.data.token);
-        console.log(res.data);
-        this.props.history.replace("/home");
-      }
-    });
+    axios
+      .post(`${apiURL}`, { email, password })
+      .then(res => {
+        if (res.status === 200) {
+          localStorage.setItem("token", res.data.token);
+          console.log(res.data);
+          this.props.history.replace("/home");
+        }
+      })
+      .catch(error => {
+        if (error) {
+          this.setState({
+            errorMessage: "username or password incorrect"
+          });
+        }
+      });
   };
 
   handleChange = e => {
@@ -38,6 +49,9 @@ class Login extends Component {
             <div className="col-md-3 register-left">
               <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
               <h3>Welcome</h3>
+              <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+                Register
+              </Link>
             </div>
             <div className="col-md-9 register-right">
               <h3 className="register-heading">Login</h3>
@@ -85,6 +99,9 @@ class Login extends Component {
               </div>
             </div>
           </div>
+          <p style={{ color: "white", fontSize: "20px" }}>
+            {this.state.errorMessage}
+          </p>
         </div>
       </React.Fragment>
     );

@@ -12,7 +12,8 @@ class Register extends Component {
     lastName: "",
     email: "",
     password: "",
-    passwordConf: ""
+    passwordConf: "",
+    errorMessage: null
   };
 
   handleSubmit = e => {
@@ -28,11 +29,16 @@ class Register extends Component {
         passwordConf
       })
       .then(res => {
-        console.log(res);
-        this.props.history.replace("/login");
+        if (res.status === 200) {
+          this.props.history.replace("/login");
+        }
       })
       .catch(error => {
-        console.log(error);
+        if (error) {
+          this.setState({
+            errorMessage: "Error: confirm details and try again"
+          });
+        }
       });
   };
 
@@ -45,9 +51,9 @@ class Register extends Component {
   render() {
     return (
       <React.Fragment>
-        <div class="container register">
-          <div class="row">
-            <div class="col-md-3 register-left">
+        <div className="container register">
+          <div className="row">
+            <div className="col-md-3 register-left">
               <img
                 src="https://image.ibb.co/n7oTvU/logo_white.png"
                 alt="login"
@@ -61,35 +67,35 @@ class Register extends Component {
               </Link>
               <br />
             </div>
-            <div class="col-md-9 register-right">
-              <h3 class="register-heading">Please Register</h3>
-              <div class="row register-form">
-                <div class="col-md-6">
-                  <div class="form-group">
+            <div className="col-md-9 register-right">
+              <h3 className="register-heading">Please Register</h3>
+              <div className="row register-form">
+                <div className="col-md-6">
+                  <div className="form-group">
                     <input
                       type="text"
                       name="firstName"
-                      class="form-control"
+                      className="form-control"
                       placeholder="First Name *"
                       value={this.state.firstName}
                       onChange={this.handleTextChange}
                     />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       type="text"
                       name="lastName"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Last Name *"
                       value={this.state.lastName}
                       onChange={this.handleTextChange}
                     />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       type="email"
                       name="email"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Email *"
                       value={this.state.email}
                       onChange={this.handleTextChange}
@@ -130,6 +136,9 @@ class Register extends Component {
               </div>
             </div>
           </div>
+          <p style={{ color: "white", fontSize: "20px" }}>
+            {this.state.errorMessage}
+          </p>
         </div>
       </React.Fragment>
     );

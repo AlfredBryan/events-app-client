@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 import NavBar from "../NavBar/NavBar";
+import Spinner from "../hoc/Spinner";
 import "./Event.css";
 
 const token = localStorage.getItem("token");
@@ -38,32 +38,39 @@ class CreateEvent extends Component {
     e.preventDefault();
     let user = this.parseJwt(token);
     let userId = user.id;
+    console.log(userId);
     const { name, description, image } = this.state;
     const formData = new FormData();
     formData.set("name", name);
     formData.set("userId", userId);
     formData.set("description", description);
     formData.append("image", image);
-    axios({
-      method: "post",
-      url: "http://localhost:4000/api/events/add",
-      data: formData,
-      config: {
-        headers: {
-          "Content-Type": "multipart/form-data"
+    axios(
+      {
+        method: "post",
+        url: "http://localhost:4000/api/events/add",
+        data: formData,
+        config: {
+          headers: {
+            "Content-Type": "multipart/form-data"
+          }
         }
-      }
-    }).then(res => {
-      if (res.ok) {
-        this.setState({
-          loading: true
-        });
+      },
+      this.setState({ loading: true })
+    ).then(res => {
+      if (res.status === 200) {
+        this.props.history.replace("/home");
       }
     });
   };
   render() {
-    let userId = this.parseJwt(token);
-    console.log(userId.id);
+    if (this.state.loading) {
+      return (
+        <div>
+          <Spinner />
+        </div>
+      );
+    }
     return (
       <React.Fragment>
         <NavBar />
@@ -99,6 +106,7 @@ class CreateEvent extends Component {
                       placeholder="Little Intro..."
                       value={this.state.description}
                       onChange={this.handlTextChange}
+                      required={true}
                     />
                   </div>
                 </div>
@@ -116,7 +124,11 @@ class CreateEvent extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <input type="submit" value="Create Event" />
+                  <input
+                    onClick={this.createEvent}
+                    type="submit"
+                    value="Create Event"
+                  />
                 </div>
               </form>
             </div>

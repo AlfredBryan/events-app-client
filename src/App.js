@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import EventSignUp from "./components/Events/EventSignUp";
-import Default from "./components/Default";
+import Default from "./components/hoc/Default";
 import Home from "./components/Home/Home";
 import ListUser from "./components/Users/ListUser";
 import CreateEvent from "./components/Events/CreateEvent";
 import Login from "./components/Users/Login";
 import Register from "./components/Users/Register";
-import Authenticate from "./components/WithAuth";
+import Authenticate from "./components/hoc/WithAuth";
 
 class App extends Component {
   render() {

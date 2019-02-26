@@ -5,20 +5,20 @@ import NavBar from "../NavBar/NavBar";
 import "./Home.css";
 
 class Home extends Component {
-  state = {};
-
-  parseJwt = token => {
-    if (!token) {
-      return;
-    }
-    const base64Url = token.split(".")[1];
-    const base64 = base64Url.replace("-", "+").replace("_", "/");
-    return JSON.parse(window.atob(base64));
+  state = {
+    events: []
   };
 
+  logOut = () => {
+    localStorage.removeItem("token");
+    this.props.history.replace("/login");
+  };
+
+  componentDidMount() {
+    
+  }
+
   render() {
-    let token = localStorage.getItem("token");
-    console.log(this.parseJwt(token));
     return (
       <React.Fragment>
         <NavBar />
@@ -39,12 +39,16 @@ class Home extends Component {
                 </i>
               </Link>
             </div>
-            <div className="col-9 mx-auto col-md-6 col-lg-4 link">
+            <div
+              className="col-9 mx-auto col-md-6 col-lg-4 link"
+              onClick={this.logOut}
+            >
               <i className="fa fa-power-off" style={{ fontSize: "20px" }}>
                 <span style={{ padding: "10px" }}>Log Out</span>
               </i>
             </div>
           </div>
+          <div className="row"></div>
         </div>
       </React.Fragment>
     );
