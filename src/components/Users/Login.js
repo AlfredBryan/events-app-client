@@ -18,7 +18,7 @@ class Login extends Component {
     axios.post(`${apiURL}`, { email, password }).then(res => {
       if (res.status === 200) {
         localStorage.setItem("token", res.data.token);
-        console.log(res.data.token);
+        console.log(res.data);
         this.props.history.replace("/home");
       }
     });

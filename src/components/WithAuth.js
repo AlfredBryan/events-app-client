@@ -22,11 +22,12 @@ class Authenticate extends Component {
       .then(res => {
         this.setState({
           user: res.data
-        }).catch(error => {
-          localStorage.removeItem("token");
-          this.props.history.push("/login");
-          console.log(error);
         });
+      })
+      .catch(error => {
+        localStorage.removeItem("token");
+        this.props.history.push("/login");
+        console.log(error);
       });
   }
 

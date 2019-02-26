@@ -5,9 +5,10 @@ import axios from "axios";
 import NavBar from "../NavBar/NavBar";
 import "./Event.css";
 
+const token = localStorage.getItem("token");
+
 class CreateEvent extends Component {
   state = {
-    userId: "",
     name: "",
     description: "",
     image: "",
@@ -24,11 +25,23 @@ class CreateEvent extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  parseJwt = token => {
+    if (!token) {
+      return;
+    }
+    const base64Url = token.split(".")[1];
+    const base64 = base64Url.replace("-", "+").replace("_", "/");
+    return JSON.parse(window.atob(base64));
+  };
+
   createEvent = e => {
     e.preventDefault();
+    let user = this.parseJwt(token);
+    let userId = user.id;
     const { name, description, image } = this.state;
     const formData = new FormData();
     formData.set("name", name);
+    formData.set("userId", userId);
     formData.set("description", description);
     formData.append("image", image);
     axios({
@@ -49,6 +62,8 @@ class CreateEvent extends Component {
     });
   };
   render() {
+    let userId = this.parseJwt(token);
+    console.log(userId.id);
     return (
       <React.Fragment>
         <NavBar />

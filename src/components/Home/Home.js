@@ -5,11 +5,20 @@ import NavBar from "../NavBar/NavBar";
 import "./Home.css";
 
 class Home extends Component {
-  state = {
-    users: []
+  state = {};
+
+  parseJwt = token => {
+    if (!token) {
+      return;
+    }
+    const base64Url = token.split(".")[1];
+    const base64 = base64Url.replace("-", "+").replace("_", "/");
+    return JSON.parse(window.atob(base64));
   };
 
   render() {
+    let token = localStorage.getItem("token");
+    console.log(this.parseJwt(token));
     return (
       <React.Fragment>
         <NavBar />
