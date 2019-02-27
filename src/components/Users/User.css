@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
 .user-main {
   height: 723px;
   width: 947px;
@@ -185,9 +186,9 @@
 
 #login,
 .content-3 {
-    -webkit-transform: translateX(-250px);
-    -moz-transform: translateX(-250px);
-    -o-transform: translateX(-250px);
-    -ms-transform: translateX(-250px);
-    transform: translateX(-250px);
+  -webkit-transform: translateX(-250px);
+  -moz-transform: translateX(-250px);
+  -o-transform: translateX(-250px);
+  -ms-transform: translateX(-250px);
+  transform: translateX(-250px);
 }

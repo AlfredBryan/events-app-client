@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Srisakdi:700");
+
 .home-page {
   margin-top: 20px;
 }
@@ -11,4 +14,77 @@ a {
 }
 a:hover {
   color: black;
+}
+.events {
+  width: 295.01px;
+  margin-top: 20px;
+  height: 188px;
+  transition: all 1s linear;
+}
+
+.events:hover {
+  border: 0.02rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.event-main {
+  width: 947px;
+  margin-left: 79px;
+  margin-top: 20px;
+}
+
+.event-name {
+  width: 149.5px;
+  height: 61px;
+  background: #6ec7e3;
+  overflow: hidden;
+}
+
+.event-name h5 {
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  padding-top: 12px;
+}
+.description {
+  width: 149.5px;
+  height: 127px;
+  background: #f2efec;
+  overflow: hidden;
+}
+
+.description h5 {
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  padding-top: 12px;
+}
+
+.description a {
+  font-size: 12px;
+  color: red;
+  font-family: "Srisakdi", cursive;
+  text-decoration: none;
+}
+
+.home-footer {
+  width: 947px;
+  height: 61px;
+  background: #1f1c1c;
+  display: inline-block;
+  bottom: 0px;
+  margin-top: 100px;
+}
+
+@media (max-width: 500px) {
+  .event-main {
+    width: 400px;
+    margin-left: 0px;
+  }
+  .home-footer {
+    width: 400px;
+  }
 }

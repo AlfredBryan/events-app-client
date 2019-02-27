@@ -21,9 +21,20 @@ textarea {
   height: 41px;
 }
 
+.footer {
+  width: 947px;
+  height: 61px;
+  background: #1f1c1c;
+  display: inline-block;
+  bottom: 0px;
+}
+
 @media screen and (max-width: 500px) {
   .main-create {
     width: 400px;
     margin-top: 15px;
+  }
+  .footer {
+    width: 400px;
   }
 }

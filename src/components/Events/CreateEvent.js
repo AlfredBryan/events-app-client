@@ -38,7 +38,6 @@ class CreateEvent extends Component {
     e.preventDefault();
     let user = this.parseJwt(token);
     let userId = user.id;
-    console.log(userId);
     const { name, description, image } = this.state;
     const formData = new FormData();
     formData.set("name", name);
@@ -81,7 +80,7 @@ class CreateEvent extends Component {
               <form action="/action_page.php">
                 <div className="row">
                   <div className="col-25">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Event Name</label>
                   </div>
                   <div className="col-75">
                     <input
@@ -133,6 +132,7 @@ class CreateEvent extends Component {
               </form>
             </div>
           </div>
+          <div className="footer"></div>
         </div>
       </React.Fragment>
     );

@@ -1,3 +1,21 @@
+.none-yet {
+  background: #6ec7e3;
+  width: 947px;
+  height: 300px;
+  margin-top: 10px;
+}
+
+.links a {
+  text-align: center;
+  text-decoration: none;
+  color: red;
+}
+
+.none-yet a {
+  text-decoration: none;
+  color: red;
+}
+
 .main-sign-up {
   width: 947px;
   height: 877px;
@@ -94,5 +112,12 @@ input[type="submit"]:hover {
   .main-sign-up {
     width: 400px;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .none-yet {
+    width: 400px;
+    margin-top: 20px;
   }
 }

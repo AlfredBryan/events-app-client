@@ -27,7 +27,6 @@ class Authenticate extends Component {
       .catch(error => {
         localStorage.removeItem("token");
         this.props.history.push("/login");
-        console.log(error);
       });
   }
 
