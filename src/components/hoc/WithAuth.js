@@ -16,7 +16,7 @@ class Authenticate extends Component {
       this.props.history.push("/login");
     }
     axios
-      .get("http://localhost:4000/api/getuser", {
+      .get("https://events-apps.herokuapp.com/api/getuser", {
         headers: { Authorization: `Bearer ${jwt}` }
       })
       .then(res => {

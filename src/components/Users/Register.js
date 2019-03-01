@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "./User.css";
 
-const apiURL = "http://localhost:4000/api/user/register";
+const apiURL = "https://events-apps.herokuapp.com/api/user/register";
 
 class Register extends Component {
   state = {

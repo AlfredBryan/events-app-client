@@ -4,6 +4,7 @@ import axios from "axios";
 
 import NavBar from "../NavBar/NavBar";
 import "./Home.css";
+import Spinner from "../hoc/Spinner";
 
 class Home extends Component {
   state = {
@@ -16,7 +17,7 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:4000/api/events/all").then(res => {
+    axios.get("https://events-apps.herokuapp.com/api/events/all").then(res => {
       const events = res.data.slice(0, 6);
       const updatedEvents = events.map(event => {
         return {
@@ -32,6 +33,10 @@ class Home extends Component {
   render() {
     let { events } = this.state;
 
+    if (events.length < 1) {
+      return <Spinner />;
+    } else {
+    }
     return (
       <React.Fragment>
         <NavBar />

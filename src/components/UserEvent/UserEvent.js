@@ -4,7 +4,7 @@ import axios from "axios";
 import NavBar from "../NavBar/NavBar";
 
 const token = localStorage.getItem("token");
-const apiURL = "http://localhost:4000/api/events";
+const apiURL = "https://events-apps.herokuapp.com/api/events";
 
 class UserEvent extends Component {
   constructor(props) {
@@ -33,8 +33,7 @@ class UserEvent extends Component {
     e.preventDefault();
     let user = this.parseJwt(token);
     let userId = user.id;
-    let eventId = this.state.eventId;
-    let id = eventId.id;
+    let id = this.state.eventId.id;
     let { name, address, phone, location, reason } = this.state;
     axios
       .post(`${apiURL}/${id}`, {

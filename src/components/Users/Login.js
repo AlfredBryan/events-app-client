@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const apiURL = "http://localhost:4000/api/user/login";
+const apiURL = "https://events-apps.herokuapp.com/api/user/login";
 
 class Login extends Component {
   constructor() {

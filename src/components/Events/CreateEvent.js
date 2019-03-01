@@ -47,7 +47,7 @@ class CreateEvent extends Component {
     axios(
       {
         method: "post",
-        url: "http://localhost:4000/api/events/add",
+        url: "https://events-apps.herokuapp.com/apievents/add",
         data: formData,
         config: {
           headers: {
@@ -132,7 +132,7 @@ class CreateEvent extends Component {
               </form>
             </div>
           </div>
-          <div className="footer"></div>
+          <div className="footer" />
         </div>
       </React.Fragment>
     );

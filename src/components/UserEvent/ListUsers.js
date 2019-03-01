@@ -4,8 +4,9 @@ import axios from "axios";
 
 import "./UserE.css";
 import NavBar from "../NavBar/NavBar";
+import Spinner from "../hoc/Spinner";
 
-const apiURL = "http://localhost:4000/api/events";
+const apiURL = "https://events-apps.herokuapp.com/api/events";
 
 class ListUsers extends Component {
   constructor(props) {
@@ -30,7 +31,25 @@ class ListUsers extends Component {
     let { users } = this.state;
     let { eventId } = this.state;
     let id = eventId.id;
-    if (users) {
+    if (users < 1) {
+      return <Spinner />;
+    } else if (!users) {
+      return (
+        <React.Fragment>
+          <NavBar />
+          <div className="container none-yet">
+            <div className="row">
+              <div className="col-10 mx-auto text-center text-title pt-5">
+                <h2>No SignUp to Event Yet</h2>
+                <Link to={`/event/signup/${id}`}>
+                  <p>click to signup for event</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </React.Fragment>
+      );
+    } else {
       return (
         <React.Fragment>
           <NavBar />
@@ -46,22 +65,6 @@ class ListUsers extends Component {
                   <p className="lname">{user.lastName}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </React.Fragment>
-      );
-    } else {
-      return (
-        <React.Fragment>
-          <NavBar />
-          <div className="container none-yet">
-            <div className="row">
-              <div className="col-10 mx-auto text-center text-title pt-5">
-                <h2>No SignUp to Event Yet</h2>
-                <Link to={`/event/signup/${id}`}>
-                  <p>click to signup for event</p>
-                </Link>
-              </div>
             </div>
           </div>
         </React.Fragment>
