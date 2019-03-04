@@ -47,7 +47,7 @@ class CreateEvent extends Component {
     axios(
       {
         method: "post",
-        url: "https://events-apps.herokuapp.com/apievents/add",
+        url: "https://events-apps.herokuapp.com/api/events/add",
         data: formData,
         config: {
           headers: {

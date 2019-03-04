@@ -8,7 +8,8 @@ import Spinner from "../hoc/Spinner";
 
 class Home extends Component {
   state = {
-    events: []
+    events: [],
+    loading: true
   };
 
   logOut = () => {
@@ -24,17 +25,63 @@ class Home extends Component {
           ...event
         };
       });
+      console.log(res.data);
       this.setState({
-        events: updatedEvents
+        events: updatedEvents,
+        loading: false
       });
     });
   }
 
   render() {
-    let { events } = this.state;
+    let { events, loading } = this.state;
 
-    if (events.length < 1) {
+    if (loading) {
       return <Spinner />;
+    }
+
+    if (events.length === 0) {
+      return (
+        <div>
+          <NavBar />
+          <div className="container wrapper home-page">
+            <div className="row">
+              <div className="col-9 mx-auto col-md-6 col-lg-4 link">
+                <Link to="/create/event">
+                  <i className="fa fa-plus" style={{ fontSize: "20px" }}>
+                    <span style={{ padding: "10px" }}>Create Events</span>
+                  </i>
+                </Link>
+              </div>
+
+              <div className="col-9 mx-auto col-md-6 col-lg-4 link">
+                <Link to="/users/view">
+                  <i className="fa fa-users" style={{ fontSize: "20px" }}>
+                    <span style={{ padding: "10px" }}>
+                      View registered Users
+                    </span>
+                  </i>
+                </Link>
+              </div>
+              <div
+                className="col-9 mx-auto col-md-6 col-lg-4 link"
+                onClick={this.logOut}
+              >
+                <i className="fa fa-power-off" style={{ fontSize: "20px" }}>
+                  <span style={{ padding: "10px" }}>Log Out</span>
+                </i>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-10 mx-auto text-center text-title text-uppercase pt-5">
+                <h1 className="display-3">404</h1>
+                <h2>No Events Yet</h2>
+              </div>
+            </div>
+            <div className="home-footer"> </div>
+          </div>
+        </div>
+      );
     } else {
     }
     return (
