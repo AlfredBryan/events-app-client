@@ -113,17 +113,15 @@ class Home extends Component {
               </i>
             </div>
           </div>
-          <div className="row event-main">
+          <div className="row event-main" id="event-main">
             {events.map(event => (
-              <div
-                className="col-9 mx-auto col-md-6 col-lg-4 events"
-                key={event.id}
-              >
+              <div className="col-xs-9 col-md-6 col-lg-4 events" key={event.id}>
                 <div className="d-flex">
                   <Link to={`/signedup/${event.id}`}>
                     <div>
                       <img
                         src={event.image}
+                        className="img-responsive"
                         style={{ width: "145.51px", height: "185px" }}
                         alt="event"
                       />
@@ -144,7 +142,9 @@ class Home extends Component {
               </div>
             ))}
           </div>
-          <div className="home-footer"> </div>
+        </div>
+        <div id="home-footer" className="home-footer">
+          {" "}
         </div>
       </React.Fragment>
     );

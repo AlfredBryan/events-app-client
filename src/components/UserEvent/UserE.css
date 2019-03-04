@@ -110,14 +110,14 @@ input[type="submit"]:hover {
     margin-left: 0px;
   }
   .main-sign-up {
-    width: 400px;
+    width: 380px;
     margin-top: 15px;
   }
 }
 
 @media (max-width: 500px) {
   .none-yet {
-    width: 400px;
+    width: 380px;
     margin-top: 20px;
   }
 }

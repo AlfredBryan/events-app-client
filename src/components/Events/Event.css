@@ -31,10 +31,10 @@ textarea {
 
 @media screen and (max-width: 500px) {
   .main-create {
-    width: 400px;
+    width: 380px;
     margin-top: 15px;
   }
   .footer {
-    width: 400px;
+    width: 380px;
   }
 }
