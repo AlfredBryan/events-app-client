@@ -59,9 +59,8 @@ class ListUser extends Component {
           <div className="user-main">
             <h5>List of Registered Users</h5>
             {users.map(user => (
-              <div key={user.id} className="d-flex wrap">
-                <p className="fname">{user.firstName}</p>
-                <p className="lname">{user.lastName}</p>
+              <div key={user.id} className="wrap">
+                <p className="fname">{user.fullName}</p>
               </div>
             ))}
           </div>

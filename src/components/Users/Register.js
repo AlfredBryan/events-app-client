@@ -26,6 +26,7 @@ class Register extends Component {
       })
       .then(res => {
         if (res.status === 200) {
+          localStorage.setItem("token", res.data.token);
           this.props.history.replace("/home");
         }
       })
