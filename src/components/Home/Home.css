@@ -76,20 +76,33 @@ a:hover {
   background: #1f1c1c;
   bottom: 0px;
   margin-top: 100px;
-  margin-left: 150px;
+  margin-left: 164px;
 }
 
-@media (max-width: 375px) {
+.home-foot {
+  width: 947px;
+  height: 61px;
+  background: #1f1c1c;
+  bottom: 0px;
+  margin-top: 100px;
+  margin-left: 77px;
+}
+
+@media (max-width: 400px) {
   #event-main {
     width: 320px;
     margin-left: 10px;
   }
   #home-footer {
-    width: 380px;
+    width: 300px;
     margin-left: 7px;
   }
   .events {
     width: 270px;
+  }
+  .home-foot {
+    width: 350px;
+    margin-left: 0px;
   }
 }
 
@@ -101,6 +114,11 @@ a:hover {
   #home-footer {
     width: 380px;
     margin-left: 0px;
+  }
+  .home-foot {
+    width: 360px;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 

@@ -8,29 +8,25 @@ const apiURL = "https://events-apps.herokuapp.com/api/user/register";
 
 class Register extends Component {
   state = {
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     password: "",
-    passwordConf: "",
     errorMessage: null
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    let { firstName, lastName, email, password, passwordConf } = this.state;
+    let { fullName, email, password } = this.state;
 
     axios
       .post(`${apiURL}`, {
-        firstName,
-        lastName,
+        fullName,
         email,
-        password,
-        passwordConf
+        password
       })
       .then(res => {
         if (res.status === 200) {
-          this.props.history.replace("/login");
+          this.props.history.replace("/home");
         }
       })
       .catch(error => {
@@ -74,20 +70,10 @@ class Register extends Component {
                   <div className="form-group">
                     <input
                       type="text"
-                      name="firstName"
+                      name="fullName"
                       className="form-control"
-                      placeholder="First Name *"
-                      value={this.state.firstName}
-                      onChange={this.handleTextChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      name="lastName"
-                      className="form-control"
-                      placeholder="Last Name *"
-                      value={this.state.lastName}
+                      placeholder="Full Name *"
+                      value={this.state.fullName}
                       onChange={this.handleTextChange}
                     />
                   </div>
@@ -96,6 +82,7 @@ class Register extends Component {
                       type="email"
                       name="email"
                       className="form-control"
+                      autoCapitalize="none"
                       placeholder="Email *"
                       value={this.state.email}
                       onChange={this.handleTextChange}
@@ -112,16 +99,6 @@ class Register extends Component {
                       maxLength="20"
                       placeholder="Password *"
                       value={this.state.password}
-                      onChange={this.handleTextChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="password"
-                      name="passwordConf"
-                      className="form-control"
-                      placeholder="Confirm Password *"
-                      value={this.state.passwordConf}
                       onChange={this.handleTextChange}
                     />
                   </div>

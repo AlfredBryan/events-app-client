@@ -9,7 +9,8 @@ const apiURL = "https://events-apps.herokuapp.com/api/users/all";
 
 class ListUser extends Component {
   state = {
-    users: []
+    users: [],
+    loading: true
   };
 
   componentDidMount() {
@@ -17,7 +18,8 @@ class ListUser extends Component {
       .get(`${apiURL}`)
       .then(res => {
         this.setState({
-          users: res.data
+          users: res.data,
+          loading: false
         });
       })
       .catch(error => {
@@ -26,7 +28,10 @@ class ListUser extends Component {
   }
 
   render() {
-    let { users } = this.state;
+    let { users, loading } = this.state;
+    if (loading) {
+      return <Spinner />;
+    }
     if (!users) {
       return (
         <div className="container">
@@ -38,7 +43,15 @@ class ListUser extends Component {
         </div>
       );
     } else if (users < 1) {
-      return <Spinner />;
+      return (
+        <div className="container">
+          <div className="row">
+            <div className="col-10 mx-auto text-center text-title text-uppercase pt-5">
+              <h3>No Users Yet</h3>
+            </div>
+          </div>
+        </div>
+      );
     } else {
       return (
         <React.Fragment>

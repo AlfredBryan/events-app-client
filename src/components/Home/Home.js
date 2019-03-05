@@ -77,7 +77,7 @@ class Home extends Component {
                 <h2>No Events Yet</h2>
               </div>
             </div>
-            <div className="home-footer"> </div>
+            <div className="home-foot"> </div>
           </div>
         </div>
       );
