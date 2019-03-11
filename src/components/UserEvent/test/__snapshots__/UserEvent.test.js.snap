@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Address input should respond to change event and change the state of the UserEvent Component: test address 1`] = `"test address"`;
+
+exports[`Location input should respond to change event and change the state of the UserEvent Component: test location 1`] = `"test location"`;
+
+exports[`Name input should respond to change event and change the state of the UserEvent Component: test name 1`] = `"test name"`;
+
+exports[`Phone input should respond to change event and change the state of the UserEvent Component: 2345556272 1`] = `"2345556272"`;
+
+exports[`Reason input should respond to change event and change the state of the UserEvent Component: for test units 1`] = `"for test units"`;
+
+exports[`UserEvent Component renders Address input 1`] = `1`;
+
+exports[`UserEvent Component renders Location input 1`] = `1`;
+
+exports[`UserEvent Component renders Name input 1`] = `1`;
+
+exports[`UserEvent Component renders Phone input 1`] = `1`;
+
+exports[`UserEvent Component renders Reason input 1`] = `1`;
+
+exports[`UserEvent Component should render without throwing an error 1`] = `false`;

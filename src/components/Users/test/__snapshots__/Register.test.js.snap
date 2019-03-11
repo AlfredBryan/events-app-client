@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Email input should respond to change event and change the state of the Register Component: test@gmail.com 1`] = `"test@gmail.com"`;
+
+exports[`Register Component renders a email input 1`] = `1`;
+
+exports[`Register Component renders a fullName input 1`] = `1`;
+
+exports[`Register Component renders a password input 1`] = `1`;
+
+exports[`Register Component should render without throwing an error 1`] = `false`;
+
+exports[`fullName input should respond to change event and change the state of the Register Component: test name 1`] = `""`;

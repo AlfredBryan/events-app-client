@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Email input should respond to change event and change the state of the Login Component: test@gmail.com 1`] = `"test@gmail.com"`;
+
+exports[`Login Component renders a email input 1`] = `1`;
+
+exports[`Login Component renders a password input 1`] = `1`;
+
+exports[`Login Component should render without throwing an error 1`] = `false`;

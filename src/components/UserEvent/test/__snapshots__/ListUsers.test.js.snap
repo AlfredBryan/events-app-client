@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fetch registered Users #componentDidMount: users 1`] = `
+Object {
+  "eventId": Object {
+    "eventId": 678256526,
+  },
+  "users": Array [],
+}
+`;

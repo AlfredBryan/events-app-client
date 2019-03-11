@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fetch registered Users #componentDidMount: users 1`] = `
+Object {
+  "loading": true,
+  "users": Array [],
+}
+`;

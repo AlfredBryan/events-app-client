@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fetch registered Users #componentDidMount: events 1`] = `
+Object {
+  "events": Array [],
+  "loading": true,
+}
+`;

@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner component render correctly Spinner Component 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Spinner />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {},
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="wrapper"
+      >
+        <div
+          class="lds-grid"
+        >
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="lds-grid"
+        >
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>,
+        "className": "wrapper",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="lds-grid"
+          >
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+            ],
+            "className": "lds-grid",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {},
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="wrapper"
+        >
+          <div
+            class="lds-grid"
+          >
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="lds-grid"
+          >
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>,
+          "className": "wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="lds-grid"
+            >
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+              ],
+              "className": "lds-grid",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

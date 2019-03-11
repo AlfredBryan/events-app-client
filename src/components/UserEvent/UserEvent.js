@@ -148,6 +148,7 @@ class UserEvent extends Component {
                 </div>
                 <div className="row">
                   <input
+                    id="submitButton"
                     onClick={this.handleSubmit}
                     type="submit"
                     value="Submit"

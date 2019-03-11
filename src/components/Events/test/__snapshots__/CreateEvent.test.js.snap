@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateEvent Component Description input 1`] = `1`;
+
+exports[`CreateEvent Component Image input 1`] = `1`;
+
+exports[`CreateEvent Component Name input 1`] = `1`;
+
+exports[`CreateEvent component should respond to change event and change the state of description: test description 1`] = `"test description"`;
+
+exports[`CreateEvent component should respond to change event and change the state of name: test name 1`] = `"test name"`;

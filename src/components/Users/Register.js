@@ -72,6 +72,7 @@ class Register extends Component {
                     <input
                       type="text"
                       name="fullName"
+                      id="fullName"
                       className="form-control"
                       placeholder="Full Name *"
                       value={this.state.fullName}
@@ -82,6 +83,7 @@ class Register extends Component {
                     <input
                       type="email"
                       name="email"
+                      id="email"
                       className="form-control"
                       autoCapitalize="none"
                       placeholder="Email *"
@@ -95,6 +97,7 @@ class Register extends Component {
                     <input
                       type="password"
                       name="password"
+                      id="password"
                       className="form-control"
                       minLength="7"
                       maxLength="20"
@@ -107,6 +110,7 @@ class Register extends Component {
                   <input
                     type="submit"
                     className="btnRegister"
+                    id="submitButton"
                     value="Register"
                     onClick={this.handleSubmit}
                   />
